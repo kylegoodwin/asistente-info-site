@@ -7,34 +7,59 @@ function Header(props) {
   return (
     <>
       <Head>
-      <title>Title{props.section && `: ${props.section}`}</title>
-      <meta name="description" content={props.description ? props.description : "Title"}></meta>
-      <meta name="robots" content="index, follow"></meta>
+        <title>Title{props.section && `: ${props.section}`}</title>
+        <meta name="description" content={props.description ? props.description : "Title"}></meta>
+        <meta name="robots" content="index, follow"></meta>
       </Head>
       <HeaderContainer>
-        <Link href="/work"><a>One</a></Link>
-        <Link href="/"><h1>Title</h1></Link>
-        <Link href="/about"><a>Two</a></Link>
+        <div className="title">
+          <img src="logo.png"></img>
+          <span>
+            Treatment <br /> Companion
+          </span>
+        </div>
+
+        <div></div>
+        <Link href="/"><a>Overview</a></Link>
+        <Link href="/"><a>{"Research & Impact"}</a></Link>
+        <Link href="/"><a>About the Project</a></Link>
       </HeaderContainer>
     </>
   )
 }
 
 const HeaderContainer = styled.div`
-  width: 100vw;
+  position: absolute;
+  width: 100%;
+  top:0;
   display: flex;
-  justify-content: center;
   align-items: center;
+  padding: 1em 2em 0 2em;
+  z-index: 1;
+
+
+  .title{
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+
+    img{
+      height: 100px;
+    }
+
+    span{
+      font-size: 1.5em;
+    }
+  }
 
   a{
     text-decoration: none;
-    margin: auto;
     font-weight: bold;
     color: inherit;
+    margin: 0 2em 0 2em;
   }
 
   h1 {
-    font-family: poynter-oldstyle-display, serif;
     font-weight: 700;
     font-style: normal;
   }

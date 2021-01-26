@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next -p 3000",
+    "dev": "next -p 7000",
     "build": "next build",
     "start": "next start",
     "export": "next export"
@@ -15,7 +15,7 @@
   "dependencies": {
     "fontfaceobserver": "^2.1.0",
     "json-loader": "^0.5.7",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.20",
     "next": "^9.3.4",
     "raw-loader": "^4.0.0",
     "react": "^16.13.1",

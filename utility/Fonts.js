@@ -2,15 +2,15 @@ const FontFaceObserver = require('fontfaceobserver')
 
 const Fonts = () => {
   const link = document.createElement('link')
-  link.href = 'https://use.typekit.net/lux8adg.css'
+  link.href = 'https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@700&display=swap'
   link.rel = 'stylesheet'
     
   document.head.appendChild(link)
 
-  const poynter = new FontFaceObserver('poynter-oldstyle-display')
+  const robotoSlab = new FontFaceObserver('Roboto Slab')
 
-  poynter.load().then(() => {
-    document.documentElement.classList.add('aktiv-grotesk')
+  robotoSlab.load().then(() => {
+    document.documentElement.classList.add('roboto-slab')
   })
 }
 
