@@ -7,6 +7,7 @@ export default function ProjectIntro() {
             <div className="text">
                 <h2>Treatment Companion</h2>
                 <h1>An adaptable solution helping improve the treatment process for tuberculosis patients worldwide.</h1>
+                <div className="trial">Currently Deployed For Clinical Trial In Argentina</div>
             </div>
             <div className="background-gradient" />
             <div className="header-image"></div>
@@ -33,7 +34,7 @@ justify-content: center;
     display: flex;
     flex-direction: column;
     width: 50%;
-    margin-left: 2em;
+    margin-left: 3em;
     margin-bottom: auto;
     margin-top: auto;
 
@@ -49,6 +50,16 @@ justify-content: center;
         text-transform: uppercase;
         font-family: "Roboto", sans-serif;
         margin: 0;
+    }
+
+    .trial{
+        align-self: flex-start;
+        font-size: 1em;
+        padding: .5em 1em .5em 1em;
+        background: white;
+        border: 1px solid #C1C1C1;
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+        border-radius: 20px;
     }
 
 }
