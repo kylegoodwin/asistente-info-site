@@ -11,12 +11,11 @@ function Header(props) {
         <meta name="description" content={props.description ? props.description : "Title"}></meta>
         <meta name="robots" content="index, follow"></meta>
       </Head>
-      <MenuBar />
     </>
   )
 }
 
-const MenuBar = (props) => {
+export function TopMenu(props){
   return (
     <HeaderContainer footer={props.footer}>
       <Logo />
@@ -38,22 +37,23 @@ const Logo = () => {
 
 const Links = () => {
   return (
-    <div>
-      <Link href="/"><a>Overview</a></Link>
-      <Link href="/"><a>{"Research & Impact"}</a></Link>
-      <Link href="/"><a>About the Project</a></Link>
+    <div className="links">
+      <Link href="/"><a>The Problem</a></Link>
+      <Link href="/"><a>Our System</a></Link>
+      <Link href="/"><a>Contact Us</a></Link>
     </div>
   )
 }
 
 export function Footer() {
 return(
-  <MenuBar footer/>
+  <TopMenu footer/>
 )
 }
 
 const HeaderContainer = styled.div`
-  position: ${props => props.footer ? "static" : "absolute"};
+
+  overflow: hidden;
   width: 100%;
   top:0;
   display: flex;
@@ -63,7 +63,7 @@ const HeaderContainer = styled.div`
   justify-content: space-between;
   flex-direction: ${props => props.footer ? "row-reverse" : "row"};
   background: ${props => props.footer ? 'linear-gradient(149.93deg, rgba(199, 221, 255, 0.3) 4.43%, #D9E8FF 116.68%);' : "none"};
-
+  box-sizing: border-box;
 
   .title{
     display: flex;
@@ -89,6 +89,7 @@ const HeaderContainer = styled.div`
     font-weight: 700;
     font-style: normal;
   }
+
 
 `
 

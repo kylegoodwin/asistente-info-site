@@ -24,7 +24,7 @@ export default class Document extends NextDocument {
         head: (
           <>
           <link rel="icon" type="image/png" href="/favicon.png" />
-          <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
           </>
         )
       }

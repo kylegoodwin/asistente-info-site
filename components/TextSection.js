@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export default function TextSection(props) {
     return (
-        <Section>
+        <Section className={props.className}>
             <h3>{props.subtitle}</h3>
             <h2>{props.title}</h2>
             {props.children}
@@ -10,7 +10,7 @@ export default function TextSection(props) {
     )
 }
 
-const Section = styled.section`
+const Section = styled.div`
     h3{
         text-transform: uppercase;
         font-family: Roboto;

@@ -4,6 +4,7 @@ import TextSection from './TextSection'
 
 export default function Problem() {
     return (
+        <>
         <ProblemArea>
             <TextSection
                 title="Tuberculosis (TB) remains a major global public health problem. "
@@ -13,6 +14,8 @@ export default function Problem() {
                 <p>Adherence to a treatment regimen is critical for TB patients, but obstacles such as treatment length, social stigma, and poverty often get in the way of successful treatment.</p>
             </TextSection>
             <FirstStats />
+            </ProblemArea>
+            <ProblemArea>
             <SecondStats />
             <TextSection
                 title="Current TB treatments fail to reach their full potential. "
@@ -24,6 +27,7 @@ export default function Problem() {
                 <p>New patient-centered strategies are needed in order to drive long-term improvement in TB treatment outcomes.</p>
             </TextSection>
         </ProblemArea>
+        </>
     )
 }
 
@@ -77,7 +81,9 @@ const ProblemArea = styled.div`
 
     & > div,& > section{
         padding: 2em;
-        width: 50%;
+        flex-basis: 50%;
+        flex: 1 1 0;
+        box-sizing: border-box;
     }
 
 `

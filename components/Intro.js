@@ -1,9 +1,11 @@
 import styled, {keyframes} from 'styled-components'
+import {TopMenu} from '../components/Header'
 
 
 export default function ProjectIntro() {
     return (
         <Container>
+          <TopMenu />
             <div className="text">
                 <h2>Treatment Companion</h2>
                 <h1>An adaptable solution helping improve the treatment process for tuberculosis patients worldwide.</h1>
@@ -11,11 +13,11 @@ export default function ProjectIntro() {
             </div>
             <div className="background-gradient" />
             <div className="header-image"></div>
-            <ScrollIcon>
+            {/* <ScrollIcon>
                 <svg width="63" height="29" viewBox="0 0 63 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3 3L31 25L60 3" stroke-width="5" stroke-linecap="round" />
                 </svg>
-            </ScrollIcon>
+            </ScrollIcon> */}
         </Container>
     )
 }
@@ -43,7 +45,7 @@ const fadeIn = keyframes`
 `;
 
 const Container = styled.div`
-height: 100vh;
+min-height: 100vh;
 display: flex;
 flex-direction: column;
 position: relative;
@@ -113,6 +115,7 @@ justify-content: center;
 `
 
 const ScrollIcon = styled.div`
+box-sizing: border-box;
 padding: 2em;
 width: 100%;
 display: flex;
