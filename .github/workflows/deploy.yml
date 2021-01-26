@@ -11,7 +11,7 @@ jobs:
   build-and-deploy:
     name: Build and Deploy
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 5
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js 10.x

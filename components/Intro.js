@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, {keyframes} from 'styled-components'
 
 
 export default function ProjectIntro() {
@@ -20,6 +20,28 @@ export default function ProjectIntro() {
     )
 }
 
+const bounce = keyframes`
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+`
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
 const Container = styled.div`
 height: 100vh;
 display: flex;
@@ -31,6 +53,7 @@ justify-content: center;
 
 
 .text{
+    animation: ${fadeIn} 2s ease;
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -96,6 +119,7 @@ display: flex;
 justify-content: center;
 
 svg{
+    animation: ${bounce} 3s infinite linear;
     stroke: #003587;
 }
 `

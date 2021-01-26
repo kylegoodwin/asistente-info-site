@@ -1,14 +1,19 @@
 import styled from 'styled-components'
-import Header from '../components/Header'
+import Header, { Footer } from '../components/Header'
 import Intro from '../components/Intro'
+import Problem from '../components/Problem'
+import System from '../components/System'
 
 export default function Index() {
 
 
     return (
         <Site>
-        <Header />
-        <Intro />
+            <Header />
+            <Intro />
+            <Problem />
+            <System />
+            <Footer />
         </Site>
     )
 }
