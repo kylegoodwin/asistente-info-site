@@ -6,18 +6,24 @@ export default function ProjectIntro() {
     return (
         <Container>
           <TopMenu />
+          <div className="main-content">
             <div className="text">
                 <h2>Treatment Companion</h2>
                 <h1>An adaptable solution helping improve the treatment process for tuberculosis patients worldwide.</h1>
                 <div className="trial">Currently Deployed For Clinical Trial In Argentina</div>
             </div>
             <div className="background-gradient" />
-            <div className="header-image"></div>
-            {/* <ScrollIcon>
+            <div className="header-image" />
+            <div className="image">
+               <img src="home.png"></img>
+            </div>
+            </div>
+           
+            <ScrollIcon>
                 <svg width="63" height="29" viewBox="0 0 63 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 3L31 25L60 3" stroke-width="5" stroke-linecap="round" />
+                    <path d="M3 3L31 25L60 3" strokeWidth="5" strokeLinecap="round" />
                 </svg>
-            </ScrollIcon> */}
+            </ScrollIcon>
         </Container>
     )
 }
@@ -51,6 +57,19 @@ flex-direction: column;
 position: relative;
 align-items: flex-start;
 justify-content: center;
+
+
+.main-content{
+  margin: auto 0 auto 0;
+  display: flex;
+}
+
+.image{
+  width: 40%;
+  img{
+    width: 100%;
+  }
+}
 
 
 
@@ -107,7 +126,7 @@ justify-content: center;
     height: 100%;
     width: 100%;
     margin: 'auto';
-    background-image: url("/header.png");
+    background-image: url("bubbles.svg");
     background-size: contain;
     background-repeat: no-repeat;
 }
