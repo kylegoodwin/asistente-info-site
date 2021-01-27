@@ -2,9 +2,7 @@ module.exports = {
     exportPathMap: function () {
         return {
             '/': { page: '/' },
-            '/home': {page: '/'},
-            '/about': { page: '/about' },
-            '/work': { page: '/work' },
+            '/home': {page: '/'}
         };
     },
     webpack: (config) => {
