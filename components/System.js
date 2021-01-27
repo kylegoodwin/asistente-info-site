@@ -83,9 +83,8 @@ position: relative;
     flex-direction: column;
     span{
         font-family: Roboto, 'sans-serif';
-        font-size: 1em;
         font-weight: 700;
-        padding: .25em .5em;
+        padding: .25em .75em;
         color: rgba(66, 133, 244, 1);
         text-transform: uppercase;
         background-color: rgba(66, 133, 244, 0.1);
@@ -94,7 +93,7 @@ position: relative;
         border-radius: 10px;
         font-style: normal;
         font-weight: bold;
-        font-size: 18px;
+        font-size: .9em;
         line-height: 24px;
 
 text-align: center;
