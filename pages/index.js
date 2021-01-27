@@ -3,6 +3,7 @@ import Intro from '../components/Intro'
 import Problem from '../components/Problem'
 import System from '../components/System'
 import NewIntro from '../components/NewIntro'
+import ValueProp from '../components/ValueProp'
 
 export default function Index() {
 
@@ -12,7 +13,7 @@ export default function Index() {
             <Header />
             <Intro />
             <Problem />
-       
+            <ValueProp />
             <System /> 
             <Footer />
         </>

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Colors from '../utility/Colors'
 
 
 const System = () => {
@@ -7,8 +8,12 @@ const System = () => {
     return(<Container>
         <h2>System At A Glance</h2>
         <DescriptionContainer>
+            <img className="person left" src="/system/patient.svg" />
+            <div className="system-section" />
             <Patient />
             <Supporter />
+            <div className="system-section" />
+            <img className="person right" src="/system/coordinator.svg" />
         </DescriptionContainer>
     </Container>)
 
@@ -17,7 +22,7 @@ const System = () => {
 
 const Patient = () => {
     return(
-        <div className="system-section">
+        <div className="system-section patient">
             <Point 
             text="Takes medication according to their treatment regimen." 
             imgSrc="/system/pill.png"
@@ -30,14 +35,13 @@ const Patient = () => {
             text="Takes metabolite test when app asks them to and submits photo of test results." 
             imgSrc="/system/test.png"
             />
-
         </div>
     )
 }
 
 const Supporter = () => {
     return(
-        <div className="system-section">
+        <div className="system-section supporter">
             <Point 
             text="Monitors overall progress of their cohort of patients using coordinator app." 
             imgSrc="/system/desktop.png"
@@ -68,9 +72,36 @@ const DescriptionContainer = styled.div`
 display: flex;
 flex: 1 1 0;
 flex-wrap: wrap;
+position: relative;
+
+.person{
+    width: 25%;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+}
+
+.left{
+    left: -5%;
+}
+
+.right{
+    right: -5%;
+}
 
 .system-section{
-    flex-basis: 50%;
+    flex-basis: 25%;
+    flex-grow: 1;
+    box-sizing: border-box;
+}
+
+.supporter > div > img{
+    width: 50px;
+    height: 50px;
+}
+
+.patient{
+    border-right: 2px solid ${Colors.textBlue}
 }
 
 
@@ -78,7 +109,9 @@ flex-wrap: wrap;
 
 const TalkingPoint = styled.div`
 img{
-    height: 100px;
+    height: 80px;
+    width: 80px;
+    object-fit: contain;
 }
 display: flex;
 background: #F2F5FA;
@@ -86,12 +119,14 @@ border-radius: 20px;
 align-self: flex-start;
 margin: 1em;
 align-items: center;
-padding: 1em;
 
 `
 
 const Container = styled.div`
-padding: 3em;
+h2{
+    padding: 1em 3em;
+}
+overflow: hidden;
 
 `
 
