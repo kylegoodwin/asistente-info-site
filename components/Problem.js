@@ -5,7 +5,7 @@ import TextSection from './TextSection'
 export default function Problem() {
     return (
         <>
-        <ProblemArea>
+        <ProblemArea id="problem" >
             <TextSection
                 title="Tuberculosis (TB) remains a major global public health problem. "
                 subtitle="The Issue"

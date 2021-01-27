@@ -38,9 +38,9 @@ const Logo = () => {
 const Links = () => {
   return (
     <div className="links">
-      <Link href="/"><a>The Problem</a></Link>
-      <Link href="/"><a>Our System</a></Link>
-      <Link href="/"><a>Contact Us</a></Link>
+      <Link href="#problem"><a>The Problem</a></Link>
+      <Link href="#solution"><a>Our System</a></Link>
+      <Link href="#contact"><a>Contact Us</a></Link>
     </div>
   )
 }

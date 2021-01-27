@@ -6,7 +6,7 @@ import Colors from '../utility/Colors';
 const ValueProp = () => {
 
 
-    return(<Container>
+    return(<Container id="solution">
         <div>
         <SuperTitle>Our Solution</SuperTitle>
         <p>

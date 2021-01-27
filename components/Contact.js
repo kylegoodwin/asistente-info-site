@@ -6,7 +6,7 @@ import ActionButton from './ActionButton'
 const ContactUs = () => {
 
 
-    return (<Container>
+    return (<Container id="contact">
         <div>
             <h2>Interested in learning more about our research?</h2>
             <span>Want a demonstration of our application?</span>
